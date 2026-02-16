@@ -1,5 +1,23 @@
-// https://www.amazon.in/AMD-ThreadripperTM-5995WX-128-Thread-Processor/dp/B0B5VLPVL5/ref=sr_1_1?crid=1BTFOLTTMXIEN&dib=eyJ2IjoiMSJ9.vhTIOV2xrvJvdFo1onFygfSEzCBk8SCVd_VzdeDuTnCtHb1CFB8cJKZ9CZ5e8p8fsjbfA9AYGasnBYr5kb3M8NlgVdHdbPqzqhR_QLIpA3-DUxcmB4sxpGQRYorXtdMXdcdt2qMI4Ky2V8krCE9SkyaeoN_LWsSCE9ojp1Jbpxbl4yXfVR9su6A6_9rH18qdqworytPsTXjQYGjfoiY8FtOFLrr-ePgnCC4eQJb9ktY.OlzOKW17Ub2eifgOjzYcq8bxu2AS1_NV4dwQiqf6BY8&dib_tag=se&keywords=ryzen+threadripper+pro+9995wx&qid=1771221184&sprefix=ryzen+thred%2Caps%2C355&sr=8-1
-// https:// -> Protocol
-// www.amazon.in -> Domain Name
-// /AMD-ThreadripperTM-5995WX-128-Thread-Processor -> Path
-// /dp/B0B5VLPVL5/ref=sr_1_1?cri--------2Caps%2C355&sr=8-1 -> Query Parameters
+//const age = process.argv[3];
+
+[
+    "node",
+    "file1.js",
+    "add",
+    "5",
+    "6",
+]
+
+const pr = process.argv[2];
+const value1 = Number(process.argv[3]);
+const value2 = Number(process.argv[4]);
+
+if(pr === "add"){
+    console.log('"process": ', value1 + value2);
+}
+if(pr === "multi"){
+    console.log('"process": ', value1 * value2);
+}
+
+// const[, , add, 5, 6] = process.argv;
+// const {} = process
