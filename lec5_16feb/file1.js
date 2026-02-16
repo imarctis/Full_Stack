@@ -58,18 +58,37 @@ Promise.resolve(10)
 
 // ----- Async/Await Example -----
 
+// const sample = async () => {
+//     try {
+//         console.log('"Started":', "Started");
+
+//         const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+//         const json = await response.json();
+//         console.log(json);
+
+//         console.log('"Ended": ', "Ended");
+//     } catch (error) {
+//         console.log("Error:", error);
+//     }
+// };
+
 const sample = async () => {
-    try {
-        console.log('"Started":', "Started");
+    const res1 = fetch("https://jsonplaceholder.typicode.com/posts/1")
+    .then((response) => response.json())
+    .then((json) => console.log(json))
 
-        const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
-        const json = await response.json();
-        console.log(json);
+    const res2 = fetch("https://jsonplaceholder.typicode.com/posts/2")
+    .then((response) => response.json())
+    .then((json) => console.log(json))
 
-        console.log('"Ended": ', "Ended");
-    } catch (error) {
-        console.log("Error:", error);
-    }
+    const a = await res1;
+    const b = await res2;
+
+    console.log(b);
+    console.log(a);
+
+    console.log("Sample ~ b:",b);
+    console.log("Sample ~ a:",a);
 };
 
 console.log('"Started": ', "Started ------------------- 1");
